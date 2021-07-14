@@ -20,7 +20,7 @@ def solution(new_id):
         if answer[-1] == '.':
             answer = answer[:-1]
     # 7단계
-    if len(answer) <= 3:
-        answer = answer + answer[-1] * (3-len(answer))
+    while len(answer) < 3:
+        answer += answer[-1]
     return answer
 
