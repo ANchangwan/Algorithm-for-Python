@@ -14,7 +14,7 @@ number_dict = dict(zip(keys, values))
 
 def solution(s):
     word = ""
-    answer
+    answer = ""
     for st in s:
         if st.isdigit():
             answer += st
