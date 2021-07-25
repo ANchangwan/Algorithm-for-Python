@@ -24,3 +24,9 @@ def solution(lottos, win_nums):
         answer.append(rank[min_count])
 
     return answer
+
+#2 교집합 
+rank = {6:1,5:2,4:3,3:4,2:5,1:6,0:6}
+
+def solution(lottos, win_nums):
+    return [rank[len(set(lottos)&set(win_nums)) + lottos.count(0)],rank[len(set(lottos)&set(win_nums))]]
