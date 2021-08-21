@@ -20,25 +20,22 @@ def solution(scores):
     result = 0
     j = 0
     i = 0
-    while i < assignment:
-        while j < len(scores):
+    for i in range(assignment):
+        for j in range(assignment):
             avg.append(scores[j][i])
-            j += 1
-        a = max(avg)
-        b = min(avg)
-        if avg[i] == a and avg.count(a) < 2:
-            avg.remove(a)
+        max_value = max(avg)
+        min_value = min(avg)
+        if avg[i] == max_value and avg.count(max_value) < 2:
+            avg.remove(max_value)
             result = sum(avg) / len(avg)
             answer += check(result)
-        elif avg[i] == b and avg.count(b) < 2:
-            avg.remove(b)
+        elif avg[i] == min_value and avg.count(min_value) < 2:
+            avg.remove(min_value)
             result = sum(avg) / len(avg)
             answer += check(result)
         else:
             result = sum(avg) / len(avg)
             answer += check(result)
         avg.clear()
-        j = 0
-        i += 1
 
     return answer
