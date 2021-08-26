@@ -2,6 +2,7 @@ def solution(record):
     answer = []
     lst = []
     dt = dict()
+
     for i in range(len(record)):
         lst.append(list(record[i].split(" ")))
 
