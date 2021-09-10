@@ -1,6 +1,5 @@
 def solution(N, stages):
     answer = []
-    count = 0
     chellenge = len(stages)
     
     for x in range(1, N+1):
