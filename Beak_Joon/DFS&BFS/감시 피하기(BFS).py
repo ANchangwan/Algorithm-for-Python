@@ -1,6 +1,6 @@
 from collections import deque
 from itertools import combinations as cb
-import copy
+
 n = int(input())
 graph = []
 teacher = []
@@ -23,16 +23,15 @@ def bfs():
 
     while q:
         x, y = q.popleft()
-        temp = copy.deepcopy(graph)
         for i in range(4):
             _x,_y = x,y
             while True:
                 nx = _x + dx[i]
                 ny = _y + dy[i]
                 if 0 <= nx < n and 0 <= ny < n:
-                    if temp[nx][ny] == "O":
+                    if graph[nx][ny] == "O":
                         break
-                    elif temp[nx][ny] == "S":
+                    elif graph[nx][ny] == "S":
                         return False
                     _x,_y = nx, ny
                 else:
