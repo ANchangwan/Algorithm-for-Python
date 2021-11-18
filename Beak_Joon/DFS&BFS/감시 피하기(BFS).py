@@ -34,8 +34,6 @@ def bfs():
                         break
                     elif temp[nx][ny] == "S":
                         return False
-                    elif temp[nx][ny] == "X":
-                        temp[nx][ny] = "T"
                     _x,_y = nx, ny
                 else:
                     break
