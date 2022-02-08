@@ -21,7 +21,7 @@ def solution(numbers):
             x = x.lstrip("0")
             if x == "":
                 continue
-            elif is_prime_number(x):
+            else is_prime_number(x):
                 res.append(x)
     answer = len(set(res))
     return answer
