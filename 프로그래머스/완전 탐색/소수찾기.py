@@ -23,5 +23,5 @@ def solution(numbers):
                 continue
             elif is_prime_number(x):
                 res.append(x)
-    answer = len(list(set(res)))
+    answer = len(set(res))
     return answer
